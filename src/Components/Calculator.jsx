@@ -1,26 +1,24 @@
 import React, { useEffect, useRef, useState } from 'react';
 import ResultCard from './Result-card';
 import styled from 'styled-components';
+import car from '../Assets/car.png';
 
 const MainWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 50%;
-  padding-right: 4rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
   margin-top: 3rem;
   margin-bottom: 5rem;
-  border-right: 2px solid rgba(117, 117, 117, 0.13);
 `;
 
 const FormWrapper = styled.div`
   color: #757575;
+  padding-right: 4rem;
   font-size: 1.5rem;
   font-family: Inter;
   font-style: normal;
   font-weight: 400;
   line-height: 181.523%;
+  border-right: 2px solid rgba(117, 117, 117, 0.13);
 `;
 
 const Input = styled.input`
@@ -40,7 +38,14 @@ const Input = styled.input`
   }
 `;
 
-const CarWrapper = styled.div``;
+const Car = styled.div`
+  background-image: url(${car});
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  padding-left: 1rem;
+`;
 
 const CardsWrapper = styled.div`
   display: grid;
@@ -131,6 +136,7 @@ const Calculator = () => {
             }}
           />
         </FormWrapper>
+        <Car />
       </MainWrapper>
       <CardsWrapper>
         <ResultCard

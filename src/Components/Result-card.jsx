@@ -6,9 +6,14 @@ const CardWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem 1rem;
+  padding: 2rem 1.5rem;
   background-color: ${({ colour }) => colour};
   color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  border-radius: 1rem;
 `;
 
 const Number = styled.span`
@@ -16,11 +21,12 @@ const Number = styled.span`
   font-size: 4rem;
 `;
 
-const Measure = styled.span``;
-
-const Description = styled.span`
-  text-align: center;
+const Measure = styled.span`
+  font-weight: 700;
+  margin-bottom: 1rem;
 `;
+
+const Description = styled.span``;
 
 const ResultCard = ({ colour, number, measure, description }) => {
   return (

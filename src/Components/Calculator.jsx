@@ -7,6 +7,11 @@ const MainWrapper = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  max-width: 50%;
+  padding-right: 4rem;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+  border-right: 2px solid rgba(117, 117, 117, 0.13);
 `;
 
 const FormWrapper = styled.div`
@@ -23,8 +28,10 @@ const Input = styled.input`
   width: 40px;
   padding: 0;
   text-align: center;
-  color: red;
+  color: black;
   font-size: 1.5rem;
+  border-bottom: 1px solid black;
+  padding-bottom: 1px;
 
   &::-webkit-inner-spin-button,
   &::-webkit-outer-spin-button {
@@ -32,6 +39,8 @@ const Input = styled.input`
     margin: 0;
   }
 `;
+
+const CarWrapper = styled.div``;
 
 const CardsWrapper = styled.div`
   display: grid;
@@ -43,8 +52,8 @@ const Calculator = () => {
   const LITRES_IN_GALLON = 4.546099265;
 
   const [mpg, setMpg] = useState(40);
-  const [price, setPrice] = useState(0);
-  const [miles, setMiles] = useState(50);
+  const [price, setPrice] = useState(140);
+  const [miles, setMiles] = useState(100);
 
   const [pounds, setPounds] = useState(0);
   const [lkm, setLkm] = useState(0);

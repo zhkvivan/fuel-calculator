@@ -9,7 +9,7 @@ const MainWrapper = styled.section`
   left: 0;
   right: 0;
   position: absolute;
-  background-color: darkslategrey;
+  background: linear-gradient(225deg, #190977 0%, #0c99a3 100%);
 `;
 
 const Container = styled.div`
@@ -18,6 +18,10 @@ const Container = styled.div`
   padding: 2rem 4rem 4rem 4rem;
   border-radius: 0 0 3rem 3rem;
   background-color: white;
+
+  @media (max-width: 700px) {
+    padding: 2rem;
+  }
 `;
 
 const App = () => {

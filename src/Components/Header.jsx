@@ -4,6 +4,14 @@ import styled from 'styled-components';
 const HeaderWrap = styled.div`
   display: flex;
   align-items: center;
+
+  @media (max-width: 700px) {
+    justify-content: center;
+  }
+
+  @media (max-width: 540px) {
+    flex-direction: column;
+  }
 `;
 
 const Heading = styled.h1`
@@ -15,14 +23,14 @@ const Heading = styled.h1`
   position: relative;
   margin-right: 20px;
 
-  &:after {
-    content: '';
-    position: absolute;
-    /* top: 0; */
-    right: -10px;
-    width: 1px;
-    height: 20px;
-    background-color: gray;
+  border-right: 1px solid gray;
+  padding-right: 20px;
+
+  @media (max-width: 540px) {
+    border: none;
+    padding-right: 0;
+    margin-right: 0;
+    letter-spacing: 7px;
   }
 `;
 

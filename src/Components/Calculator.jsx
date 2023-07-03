@@ -8,6 +8,11 @@ const MainWrapper = styled.div`
   grid-template-columns: 2fr 1fr;
   margin-top: 3rem;
   margin-bottom: 5rem;
+
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+    margin-bottom: 2rem;
+  }
 `;
 
 const FormWrapper = styled.div`
@@ -19,6 +24,11 @@ const FormWrapper = styled.div`
   font-weight: 400;
   line-height: 181.523%;
   border-right: 2px solid rgba(117, 117, 117, 0.13);
+
+  @media (max-width: 700px) {
+    border: none;
+    padding: 0;
+  }
 `;
 
 const Input = styled.input`
@@ -51,6 +61,21 @@ const CardsWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3rem;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0 5rem;
+  }
+
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      'first second'
+      'third third';
+    padding: 0;
+  }
 `;
 
 const Calculator = () => {
@@ -140,6 +165,7 @@ const Calculator = () => {
       </MainWrapper>
       <CardsWrapper>
         <ResultCard
+          gridArea={'first'}
           colour={'#0AA92D'}
           number={litresConsumed}
           measure={'литров'}
@@ -148,6 +174,7 @@ const Calculator = () => {
           }
         />
         <ResultCard
+          gridArea={'second'}
           colour={'#2066CE'}
           number={pounds}
           measure={'фунтов'}
@@ -156,6 +183,7 @@ const Calculator = () => {
           }
         />
         <ResultCard
+          gridArea={'third'}
           colour={'#CE5F20'}
           number={lkm}
           measure={'литров на 100 километров'}

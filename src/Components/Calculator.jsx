@@ -33,13 +33,14 @@ const FormWrapper = styled.div`
 
 const Input = styled.input`
   border: none;
-  width: 40px;
+  width: 80px;
   padding: 0;
   text-align: center;
   color: black;
   font-size: 1.5rem;
   border-bottom: 1px solid black;
   padding-bottom: 1px;
+  letter-spacing: 3px;
 
   &::-webkit-inner-spin-button,
   &::-webkit-outer-spin-button {

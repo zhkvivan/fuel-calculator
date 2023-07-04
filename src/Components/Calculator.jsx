@@ -136,7 +136,12 @@ const Calculator = () => {
             onChange={(e) => {
               mpgRef.current.style.width =
                 String(+e.target.value).length * 15 + 15 + 'px';
-              setMpg(e.target.value);
+              setMpg(() => {
+                if (isNaN(e.target.value)) {
+                  return '';
+                }
+                return e.target.value;
+              });
             }}
           />
           <span> mpg, при этом стоимость топлива на заправке составляет </span>

@@ -3,6 +3,13 @@ import ResultCard from './Result-card';
 import styled from 'styled-components';
 import car from '../Assets/car.png';
 
+const ContentWrapper = styled.div`
+  @media (max-width: 700px) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+`;
+
 const MainWrapper = styled.div`
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -82,8 +89,8 @@ const CardsWrapper = styled.div`
 const Calculator = () => {
   const LITRES_IN_GALLON = 4.546099265;
 
-  const [mpg, setMpg] = useState(40);
-  const [price, setPrice] = useState(140);
+  const [mpg, setMpg] = useState(55);
+  const [price, setPrice] = useState(152);
   const [miles, setMiles] = useState(100);
 
   const [pounds, setPounds] = useState(0);
@@ -125,7 +132,7 @@ const Calculator = () => {
   }, [litresConsumed, price]);
 
   return (
-    <>
+    <ContentWrapper>
       <MainWrapper>
         <FormWrapper>
           <span>Моя машина потребляет </span>
@@ -196,7 +203,7 @@ const Calculator = () => {
           description={'Расход топлива в литрах на сто километров'}
         />
       </CardsWrapper>
-    </>
+    </ContentWrapper>
   );
 };
 

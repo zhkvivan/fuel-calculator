@@ -7,6 +7,7 @@ const HeaderWrap = styled.div`
 
   @media (max-width: 700px) {
     justify-content: center;
+    margin-bottom: 2rem;
   }
 
   @media (max-width: 540px) {
